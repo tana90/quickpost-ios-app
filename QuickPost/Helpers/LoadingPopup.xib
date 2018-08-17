@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rqO-4x-mjg" customClass="LoadingPopup" customModule="QuickPost" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtE-2g-vsa">
+                    <rect key="frame" x="137" y="283" width="100" height="100"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-aM-0Ls">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TGQ-T6-9QW">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQC-we-XhO">
+                                        <rect key="frame" x="28" y="74" width="45.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aQC-we-XhO" firstAttribute="centerX" secondItem="TGQ-T6-9QW" secondAttribute="centerX" id="m4M-c5-or9"/>
+                                </constraints>
+                            </view>
+                            <blurEffect style="dark"/>
+                        </visualEffectView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bbt-k7-vs4">
+                            <rect key="frame" x="32" y="27.5" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="0Wm-aM-0Ls" secondAttribute="bottom" id="Fd7-hy-Fcd"/>
+                        <constraint firstAttribute="trailing" secondItem="0Wm-aM-0Ls" secondAttribute="trailing" id="I90-Uf-lI0"/>
+                        <constraint firstAttribute="width" constant="100" id="IBM-FN-SQF"/>
+                        <constraint firstAttribute="height" constant="100" id="Ppr-Xv-a2W"/>
+                        <constraint firstItem="0Wm-aM-0Ls" firstAttribute="top" secondItem="VtE-2g-vsa" secondAttribute="top" id="fge-Un-OIY"/>
+                        <constraint firstItem="0Wm-aM-0Ls" firstAttribute="leading" secondItem="VtE-2g-vsa" secondAttribute="leading" id="oFG-cl-fK6"/>
+                        <constraint firstItem="bbt-k7-vs4" firstAttribute="centerX" secondItem="VtE-2g-vsa" secondAttribute="centerX" id="vPS-Wa-ZCt"/>
+                        <constraint firstItem="aQC-we-XhO" firstAttribute="top" secondItem="bbt-k7-vs4" secondAttribute="bottom" constant="9.5" id="wLr-a9-rC5"/>
+                        <constraint firstItem="bbt-k7-vs4" firstAttribute="centerY" secondItem="VtE-2g-vsa" secondAttribute="centerY" constant="-4" id="ygf-5W-ZYJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.050433433178082236" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VtE-2g-vsa" firstAttribute="centerX" secondItem="rqO-4x-mjg" secondAttribute="centerX" id="pxg-Yf-eNb"/>
+                <constraint firstItem="VtE-2g-vsa" firstAttribute="centerY" secondItem="rqO-4x-mjg" secondAttribute="centerY" id="s3y-LG-kxq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="26e-7M-0E4"/>
+            <connections>
+                <outlet property="loadingView" destination="VtE-2g-vsa" id="a5y-St-Rfa"/>
+            </connections>
+            <point key="canvasLocation" x="-140.5" y="-64.5"/>
+        </view>
+    </objects>
+</document>

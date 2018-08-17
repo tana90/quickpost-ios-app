@@ -1,0 +1,11 @@
+framework module SwiftLinkPreview {
+  umbrella header "SwiftLinkPreview.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftLinkPreview.Swift {
+    header "SwiftLinkPreview-Swift.h"
+    requires objc
+}
